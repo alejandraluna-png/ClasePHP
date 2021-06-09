@@ -8,7 +8,7 @@
         private static $pass = ""; //contraseña del usuario
         private static $instance; //instancia de la conexion
 
-        public function _construct(){
+        public function __construct(){
             $this->db = new PDO(self::$dns, self::$user, self::$pass);
         }
 
