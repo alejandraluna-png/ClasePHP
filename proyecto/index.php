@@ -25,7 +25,8 @@
             if ($_GET['confirm'] === "2"){
                 echo '<div class="alert alert-danger" role="alert">Uno o mas campos estan vacios</div>';
             }
-            //if ($_GET['confirm'] === "3")
+            if ($_GET['confirm'] === "3")
+            echo '<div class="alert alert-danger" role="alert">El competidor ya ha sido registrado</div>';
         }
 
          

@@ -14,7 +14,13 @@
 
 
         $conexion = new Database;
-        $confirm = $conexion->insertar($nombre, $apellido, $categoria, $edad, $marca_coche, $modelo, $numero_de_competidor);
+        $resultado = $conexion->validarCorredor($numero_de_competidor);
+        $contador = $resultado->rowCount();
+        if($contador > 0){
+          $confirm = 3;
+        } else{
+          $confirm = $conexion->insertar($nombre, $apellido, $categoria, $edad, $marca_coche, $modelo, $numero_de_competidor);
+        }
       }else{
           $confirm = 2;
       }
